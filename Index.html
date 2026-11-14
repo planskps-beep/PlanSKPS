@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ระบบแผนพัฒนาท้องถิ่น (พ.ศ. 2571 - 2575) - อบต.คลองประสงค์</title>
+  <!-- ใส่ไอคอนโลโก้ อบต. บนแท็บเบราว์เซอร์ -->
+  <link rel="icon" href="https://sv1.img.in.th/Hlqhvk.png" type="image/png">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* ปิดสกรอลล์บาร์ซ้อนของหน้าต่างนอก */
+      background-color: #f3f6fb;
+    }
+
+    .iframe-wrapper {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh; /* รองรับความสูงหน้าจอมือถือแบบไดนามิก */
+      overflow: hidden;
+    }
+
+    /* ดันขอบบนของ iframe ขึ้นไปเพื่อซ่อนแถบของ Google Apps Script */
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: -10px; 
+      left: 0;
+      width: 100%;
+      height: calc(100vh + 10px);
+      height: calc(100dvh + 10px);
+      border: none;
+    }
+
+    /* สำหรับหน้าจอมือถือ */
+    @media (max-width: 768px) {
+      .iframe-wrapper iframe {
+        top: -12px;
+        height: calc(100vh + 12px);
+        height: calc(100dvh + 12px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="iframe-wrapper">
+    <!-- ใส่ allow="clipboard-read; clipboard-write" เพื่อให้ฟังก์ชันคัดลอกทำงานผ่าน iframe ได้ -->
+    <iframe 
+      src="https://script.google.com/macros/s/AKfycbzdwOzZJCt6Em3to3xft5vlOw9ooadEAK2D3AfXYWNVQz40WGyhpGs7ras4sTKUq5Owpg/exec" 
+      allow="clipboard-read; clipboard-write">
+    </iframe>
+  </div>
+
+</body>
+</html>
